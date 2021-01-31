@@ -117,6 +117,16 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("FIND THE SMALLEST NUMBER IN AN ARRAY\n");
 
             // Enter your solution here
+            int[] userNumbers = new int[5];
+            for (int index = 0; index < userNumbers.Length; index++)
+            {
+                Console.WriteLine("Please enter an integer: ");
+                int userNumber = Convert.ToInt32(Console.ReadLine());
+                userNumbers[index] = userNumber;
+            }
+            Array.Sort(userNumbers);
+            Console.WriteLine("The smallest number is: " + userNumbers[0]);
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -131,6 +141,11 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("SHOPPING LIST\n");
 
             // Enter your solution here
+            string[] shoppingList = new string[4] { "Bread", "Tofu", "Tortillas", "Almond Milk" };
+            for (int index = 0; index < shoppingList.Length; index++)
+            {
+                Console.WriteLine(shoppingList[index]);
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
