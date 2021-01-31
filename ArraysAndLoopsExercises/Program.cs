@@ -69,6 +69,15 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("SORT THE NUMBERS\n");
 
             // Enter your solution here
+            int[] favoriteNumbers = new int[10];
+            for (int index = 0; index < favoriteNumbers.Length; index++)
+            {
+                Console.WriteLine("What is your favorite number?");
+                int favoriteNumber = Convert.ToInt32(Console.ReadLine());
+                favoriteNumbers[index] = favoriteNumber;
+            }
+            Array.Sort(favoriteNumbers);
+            Console.WriteLine("The first number is: " + favoriteNumbers[0] + "\nThe last number is: " + favoriteNumbers[9]);
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -86,6 +95,14 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("WHICH DAY OF THE WEEK?\n");
 
             // Enter your solution here
+            string[] daysOfWeek = new string[8] { "Zero", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" } ;
+            for (int index = 1; index < daysOfWeek.Length; index++)
+            {
+                Console.WriteLine(index + " = " + daysOfWeek[index]);
+            }
+            Console.WriteLine("Choose a number between 1-7");
+            int userNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("You have chosen " + daysOfWeek[userNumber] + " as the day of the week.");
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
