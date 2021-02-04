@@ -160,6 +160,55 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("WHAT'S THE LONGEST WORD?\n");
 
             // Enter your solution here
+            Console.WriteLine("Type a phrase of 1 to 4 words, no punctuation please.");
+            string userPhrase = Console.ReadLine();
+            string[] userWords = userPhrase.Split(' ');
+            int[] userWordLengths = new int[4];
+
+            for (int index = 0; index < userWords.Length; index++)
+            {
+                userWordLengths[index] = userWords[index].Length;
+            }
+            Array.Sort(userWordLengths);
+
+            string[] sortedWords = new string[4];
+            for (int index = 0; index <= 3; index++)
+            {
+                if (userWordLengths[0] == userWords[index].Length && sortedWords[0] == null)
+                {
+                    sortedWords[0] = userWords[index];
+                    continue;
+                }
+                if (userWordLengths[1] == userWords[index].Length && sortedWords[1] == null)
+                {
+                    sortedWords[1] = userWords[index];
+                    continue;
+                }
+                if (userWordLengths[2] == userWords[index].Length && sortedWords[2] == null)
+                {
+                    sortedWords[2] = userWords[index];
+                    continue;
+                }
+                if (userWordLengths[3] == userWords[index].Length && sortedWords[3] == null)
+                {
+                    sortedWords[3] = userWords[index];
+                    continue;
+                }
+                else
+                    continue;
+            }
+            
+            if (sortedWords[2].Length == sortedWords[3].Length)
+            {
+                Console.WriteLine("The longest words are " + sortedWords[2] + " and " + sortedWords[3]);
+            }
+            else
+                Console.WriteLine("The longest word is " + sortedWords[3]);
+
+
+
+
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -174,6 +223,12 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("WHAT'S THE SECOND TO LAST WORD?\n");
 
             // Enter your solution here
+            Console.WriteLine("Type a phrase of at least 4 words, no punctuation please.");
+            string userPhrase = Console.ReadLine();
+            string[] userWords = userPhrase.Split(' ');
+
+            string secondToLastWord = userWords[userWords.Length - 2];
+            Console.WriteLine("The second to last word is " + secondToLastWord);
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -189,6 +244,13 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("PRINT A TRIANGLE\n");
 
             // Enter your solution here
+            Console.WriteLine("Please enter a number between 3 and 6");
+            int userNumber = Convert.ToInt32(Console.ReadLine());
+            string[] triangle = new string[] { " ", "*", "**", "***", "****", "*****", "******" };
+            for (int index = 0; index <= userNumber; index++)
+            {
+                Console.WriteLine(triangle[index]);
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -203,6 +265,43 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("COMMON VALUES\n");
 
             // Enter your solution here
+            string[] arrayOne = new string[3] { null, null, null };
+            string[] arrayTwo = new string[3] { "1", "2", "3" };
+            string[] arrayThree = new string[3] { "2", "3", "4" };
+
+            for (int index = 0; index <= 2; index++)
+            {
+                if (arrayTwo[index] == arrayThree[0])
+                {
+                    arrayOne[index] = arrayThree[0];
+                }
+                if (arrayTwo[index] == arrayThree[1])
+                {
+                    arrayOne[index] = arrayThree[1];
+                }
+                if (arrayTwo[index] == arrayThree[2])
+                {
+                    arrayOne[index] = arrayThree[2];
+                }
+                else
+                    continue;
+            }
+            Console.WriteLine("The first set of values are: ");
+            for (int index = 0; index < arrayTwo.Length; index++)
+            {
+                Console.WriteLine(arrayTwo[index]);
+            }
+
+            Console.WriteLine("The second set of values are: ");
+            for (int index = 0; index < arrayThree.Length; index++)
+            {
+                Console.WriteLine(arrayThree[index]);
+            }
+            Console.WriteLine("The common values are: ");
+            for (int index = 0; index < arrayOne.Length; index++)
+            {
+                Console.WriteLine(arrayOne[index]);
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
