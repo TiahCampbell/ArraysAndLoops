@@ -172,7 +172,7 @@ namespace ArraysAndLoopsExercises
             Array.Sort(userWordLengths);
 
             string[] sortedWords = new string[4];
-            for (int index = 0; index <= 3; index++)
+            for (int index = 0; index < userWords.Length; index++)
             {
                 if (userWordLengths[0] == userWords[index].Length && sortedWords[0] == null)
                 {
